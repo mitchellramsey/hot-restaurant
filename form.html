@@ -37,7 +37,7 @@
           </div>
           <div class="panel-body">
 
-            <form role="form">
+            <form method="POST" role="form">
 
               <div class="form-group">
                 <label for="reserve-name">Name</label>
@@ -59,7 +59,7 @@
                 <input type="text" class="form-control" id="reserve-unique-id">
               </div>
 
-              <button type="submit" class="btn btn-primary submit" >Submit</button>
+              <button type="submit" class="btn btn-primary submit" id="submit">Submit</button>
             </form>
 
           </div>
@@ -76,6 +76,18 @@
     </footer>
 
   </div>
+
+  <script type="text/javascript">
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+      var newCharacter = {
+        name: $("#name").val().trim(),
+        phone: $("#phone").val().trim(),
+        email: $("#email").val().trim(),
+        uniqueId: $("#unique-id").val().trim()
+      };
+    });
+  </script>
 
 </body>
 </html>
