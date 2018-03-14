@@ -96,7 +96,7 @@
         uniqueId: $("#reserve-unique-id").val().trim()
       };
 
-      $.post("/api/new", newReservation)
+      $.post("/api/reservations", newReservation)
         .then(function (data) {
           console.log(data);
           alert("Your reservation has been added!!  Please check for your placement on the main page.");
