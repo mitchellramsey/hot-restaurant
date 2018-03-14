@@ -14,8 +14,29 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
+// Reservations (DATA)
+// =============================================================
+var reservations = [];
 
 
+
+// Routes
+// =============================================================
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "home.html"));
+});
+
+app.get("/reservations", function(res, res) {
+    res.sendFile(path.join(__dirname, "form.html"));
+});
+
+app.get("/waiting-list", function(req, res) {
+    res.sendFile(path.join(__dirname, "list.html"));
+});
+
+app.get("/api/reservations", function(req, res) {
+    res.json(reservations);
+});
 
 
 
