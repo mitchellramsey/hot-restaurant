@@ -34,7 +34,9 @@ app.get("/waiting-list", function(req, res) {
     res.sendFile(path.join(__dirname, "list.html"));
 });
 
-app.get("/api/reservations,)
+app.get("/api/reservations", function(req, res) {
+    res.json(reservations);
+});
 
 
 
