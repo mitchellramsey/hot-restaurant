@@ -91,10 +91,14 @@
         uniqueId: $("#reserve-unique-id").val().trim()
       };
 
+<<<<<<< HEAD
       $("#reserve-name").empty();
       $("#reserve-phone").empty();
       $("#reserve-email").empty();
       $("#reserve-unique-id").empty();
+=======
+      $('.form-control').empty();
+>>>>>>> d11b72a3e9984e190225727c7a666014f3d7a809
 
       $.post("/api/reservations", newReservation)
         .then(function (data) {
