@@ -91,6 +91,8 @@
         uniqueId: $("#reserve-unique-id").val().trim()
       };
 
+      $('.form-control').empty();
+
       $.post("/api/reservations", newReservation)
         .then(function (data) {
           console.log(data);
