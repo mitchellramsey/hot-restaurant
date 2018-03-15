@@ -91,6 +91,11 @@
         uniqueId: $("#reserve-unique-id").val().trim()
       };
 
+      $("#reserve-name").empty();
+      $("#reserve-phone").empty();
+      $("#reserve-email").empty();
+      $("#reserve-unique-id").empty();
+
       $.post("/api/reservations", newReservation)
         .then(function (data) {
           console.log(data);
