@@ -39,9 +39,6 @@ app.get("/api/reservations", function(req, res) {
 });
 
 
-
-
-
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
